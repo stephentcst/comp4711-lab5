@@ -1,0 +1,32 @@
+<div id="artist-dir-div">
+  <div id="artist-dir-inner-div">
+    <h1><b>Artist Directory</b></h1>
+    <div id="form-btn-div">
+      <form id="artist-search-form">
+        <input id="artist-search-text-field" type="text" placeholder="Search..."></input>
+      </form>
+      <button id="search-artist-btn" onmouseup="searchArtists()">Search</button>
+      <button id="add-artist-btn" onmouseup="toggleForm()">Add artist</button>
+    </div>
+  </div>
+</div>
+
+<div id="input-form-div">
+  <form method="POST" id="input-form">
+    <input type="text" name="name" placeholder="Artist name" maxlength="40"></input>
+    <br/>
+    <input type="text" name="about" placeholder="About artist" maxlength="40"></input>
+    <br/>
+    <input type="text" name="url" placeholder="Image URL"></input>
+    <br/>
+    <input type="hidden" name="id" value=""></input>
+    <input type="hidden" name="delete" value="no"></input>
+    {{!-- <button id="add-btn" type="button" onmouseup="pushArtist()">Add</button> --}}
+    <button id="add-btn" type="submit">Add</button>
+  </form>
+</div>
+
+<!-- div to append artists to -->
+<div id="artists-master"></div>
+
+<span id="file-data">{{ data }}</span>
